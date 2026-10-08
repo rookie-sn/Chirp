@@ -1,12 +1,12 @@
 import type { Post, User, Comment } from '../types';
 
-// Hardcoded logged-in user (Emily Johnson)
+// Hardcoded logged-in user (Siva N)
 export const CURRENT_USER: User = {
   id: 1,
-  firstName: 'Emily',
-  lastName: 'Johnson',
-  username: 'emilys',
-  email: 'emily.johnson@chirp.io',
+  firstName: 'Siva',
+  lastName: 'N',
+  username: 'Siva.n',
+  email: 'Siva.n@chirp.io',
   image: 'https://dummyjson.com/icon/emilys/128',
   bio: 'Product Designer at Chirp. Love clean UI and React!',
   company: {
@@ -14,8 +14,8 @@ export const CURRENT_USER: User = {
     title: 'Lead Product Designer',
   },
   address: {
-    city: 'San Francisco',
-    state: 'California',
+    city: 'coimbatore',
+    state: 'coimbatore',
   },
   followersCount: 1420,
   followingCount: 380,
@@ -75,13 +75,13 @@ export async function getPostById(id: number) {
   } else if (p.reactions && typeof p.reactions.likes === 'number') {
     likes = p.reactions.likes;
   }
-
+  // new post after creation
   return {
     id: p.id,
     title: p.title,
     body: p.body,
-    tags: p.tags || ['chirp'],
-    reactions: { likes, dislikes: 0 },
+    tags: p.tags || ['chirp', 'New'],
+    reactions: { likes: 1, dislikes: 0 },
     views: p.views || 100,
     userId: p.userId,
     createdAt: `${(p.id * 3) % 24 + 1}h ago`,

@@ -87,11 +87,10 @@ export const FeedView: React.FC<FeedViewProps> = ({
           {/* Following Tab */}
           <button
             onClick={() => onTabChange('following')}
-            className={`flex-1 py-3.5 text-center font-bold text-sm sm:text-base relative flex items-center justify-center gap-2 ${
-              activeTab === 'following'
-                ? 'text-[#00B59C]'
-                : 'text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
-            }`}
+            className={`flex-1 py-3.5 text-center font-bold text-sm sm:text-base relative flex items-center justify-center gap-2 ${activeTab === 'following'
+              ? 'text-[#00B59C]'
+              : 'text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+              }`}
           >
             <Users className="w-4 h-4" />
             <span>Following</span>
@@ -103,11 +102,10 @@ export const FeedView: React.FC<FeedViewProps> = ({
           {/* Suggested Tab */}
           <button
             onClick={() => onTabChange('suggested')}
-            className={`flex-1 py-3.5 text-center font-bold text-sm sm:text-base relative flex items-center justify-center gap-2 ${
-              activeTab === 'suggested'
-                ? 'text-[#00B59C]'
-                : 'text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
-            }`}
+            className={`flex-1 py-3.5 text-center font-bold text-sm sm:text-base relative flex items-center justify-center gap-2 ${activeTab === 'suggested'
+              ? 'text-[#00B59C]'
+              : 'text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+              }`}
           >
             <Sparkles className="w-4 h-4" />
             <span>Suggested</span>
@@ -118,7 +116,7 @@ export const FeedView: React.FC<FeedViewProps> = ({
         </div>
       </div>
 
-      {/* Quick compose box on mobile and tablet */}
+      {/*  Quick compose box on mobile and tablet */}
       <div className="lg:hidden">
         <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-card border border-gray-100 dark:border-slate-700/60 p-3">
           <button

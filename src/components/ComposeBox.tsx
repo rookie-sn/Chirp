@@ -133,13 +133,12 @@ export const ComposeBox: React.FC<ComposeBoxProps> = ({
           {/* Right side: 280 count and Post pill */}
           <div className="flex items-center gap-3">
             <span
-              className={`text-xs ${
-                isTooLong
-                  ? 'text-red-500 font-bold'
-                  : charsLeft < 30
+              className={`text-xs ${isTooLong
+                ? 'text-red-500 font-bold'
+                : charsLeft < 30
                   ? 'text-amber-500 font-medium'
                   : 'text-gray-400'
-              }`}
+                }`}
             >
               {body.length}/280
             </span>
@@ -148,11 +147,10 @@ export const ComposeBox: React.FC<ComposeBoxProps> = ({
             <button
               type="submit"
               disabled={!canPost}
-              className={`px-5 py-2 rounded-full font-bold text-sm transition-all ${
-                canPost
-                  ? 'bg-[#00B59C] text-white hover:bg-[#009d87] cursor-pointer'
-                  : 'bg-gray-200 dark:bg-slate-700 text-gray-400 cursor-not-allowed'
-              }`}
+              className={`px-5 py-2 rounded-full font-bold text-sm transition-all ${canPost
+                ? 'bg-[#00B59C] text-white hover:bg-[#009d87] cursor-pointer'
+                : 'bg-gray-200 dark:bg-slate-700 text-gray-400 cursor-not-allowed'
+                }`}
             >
               Post ➢
             </button>

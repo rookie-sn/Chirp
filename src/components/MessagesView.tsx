@@ -17,29 +17,30 @@ export const MessagesView: React.FC<MessagesViewProps> = ({
     {
       id: 1,
       userId: 2,
-      name: 'Michael Williams',
-      handle: '@michaelw',
+      name: 'Raja Karuppasamy',
+      handle: '@RajaK',
       avatar: 'https://dummyjson.com/icon/michaelw/128',
-      lastMessage: 'Hey Emily, loved the new Figma layout implementation!',
+      lastMessage: 'Hey Siva',
       time: '12m ago',
       unread: true,
       messages: [
-        { sender: 'other', text: 'Hey Emily, how is the Chirp project coming along?', time: '10:30 AM' },
-        { sender: 'me', text: 'Hey Michael! Going super smooth. Tailwind and infinite scrolling are locked in.', time: '10:32 AM' },
-        { sender: 'other', text: 'Hey Emily, loved the new Figma layout implementation!', time: '10:35 AM' },
+        { sender: 'other', text: 'Hey Siva, how is the Chirp project coming along?', time: '10:30 AM' },
+        { sender: 'me', text: 'Hey Raja K! Going super smooth. Tailwind and infinite scrolling are locked in.', time: '10:32 AM' },
+        { sender: 'other', text: 'Hey Siva, loved the new Figma layout implementation!', time: '10:35 AM' },
       ],
     },
     {
       id: 2,
       userId: 3,
-      name: 'Sophia Brown',
-      handle: '@sophiab',
+      name: 'Levi Ackerman',
+      handle: '@LeviAcker',
       avatar: 'https://dummyjson.com/icon/sophiab/128',
-      lastMessage: 'Let’s sync on the responsive drawer styles tomorrow.',
+      lastMessage: 'Let’s meet tomorrow.',
       time: '1h ago',
       unread: false,
       messages: [
-        { sender: 'other', text: 'Let’s sync on the responsive drawer styles tomorrow.', time: '9:15 AM' },
+        { sender: 'other', text: 'Let’s meet tomorrow.', time: '9:15 AM' },
+        { sender: 'me', text: 'Are you sure?.', time: '9:19 AM' },
       ],
     },
   ]);
@@ -106,11 +107,10 @@ export const MessagesView: React.FC<MessagesViewProps> = ({
             <div
               key={c.id}
               onClick={() => setActiveConvId(c.id)}
-              className={`p-3.5 flex items-center gap-3 cursor-pointer transition-colors ${
-                c.id === activeConvId
-                  ? 'bg-[#00B59C]/10 border-l-4 border-[#00B59C]'
-                  : 'hover:bg-gray-50 dark:hover:bg-slate-700/40'
-              }`}
+              className={`p-3.5 flex items-center gap-3 cursor-pointer transition-colors ${c.id === activeConvId
+                ? 'bg-[#00B59C]/10 border-l-4 border-[#00B59C]'
+                : 'hover:bg-gray-50 dark:hover:bg-slate-700/40'
+                }`}
             >
               <img
                 src={c.avatar}
@@ -159,16 +159,14 @@ export const MessagesView: React.FC<MessagesViewProps> = ({
             {activeConv.messages.map((m, idx) => (
               <div
                 key={idx}
-                className={`flex flex-col ${
-                  m.sender === 'me' ? 'items-end' : 'items-start'
-                }`}
+                className={`flex flex-col ${m.sender === 'me' ? 'items-end' : 'items-start'
+                  }`}
               >
                 <div
-                  className={`max-w-xs sm:max-w-md px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
-                    m.sender === 'me'
-                      ? 'bg-[#00B59C] text-white rounded-br-none shadow-sm'
-                      : 'bg-white dark:bg-slate-700 text-gray-800 dark:text-gray-100 rounded-bl-none shadow-sm border border-gray-100 dark:border-slate-600/60'
-                  }`}
+                  className={`max-w-xs sm:max-w-md px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${m.sender === 'me'
+                    ? 'bg-[#00B59C] text-white rounded-br-none shadow-sm'
+                    : 'bg-white dark:bg-slate-700 text-gray-800 dark:text-gray-100 rounded-bl-none shadow-sm border border-gray-100 dark:border-slate-600/60'
+                    }`}
                 >
                   {m.text}
                 </div>

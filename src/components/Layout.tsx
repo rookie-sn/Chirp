@@ -97,8 +97,8 @@ export const Layout: React.FC = () => {
             <Outlet />
           </main>
 
-          {/* Column 3: Right Sidebar (Cards scroll naturally with the feed) */}
-          <aside className="hidden lg:block space-y-5">
+          {/* Column 3: Right Sidebar (Sticky in place, does not scroll away with feed) */}
+          <aside className="hidden lg:block sticky top-20 self-start z-20 space-y-5 max-h-[calc(100vh-5.5rem)] overflow-y-auto pr-1">
             {/* Top Widget: "Share What You Are Feeling! 😁" */}
             <ComposeBox
               currentUser={CURRENT_USER}

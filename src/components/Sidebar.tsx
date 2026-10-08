@@ -95,26 +95,23 @@ export const Sidebar: React.FC<SidebarProps> = ({
             <Link
               key={item.to}
               to={item.to}
-              className={`w-full flex items-center gap-3.5 px-3.5 py-3 rounded-2xl font-semibold text-sm transition-all duration-200 group relative ${
-                isActive
-                  ? 'bg-[#00B59C] text-white shadow-sm shadow-[#00B59C]/20'
-                  : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700/60 hover:text-gray-900 dark:hover:text-white'
-              }`}
+              className={`w-full flex items-center gap-3.5 px-3.5 py-3 rounded-2xl font-semibold text-sm transition-all duration-200 group relative ${isActive
+                ? 'bg-[#00B59C] text-white shadow-sm shadow-[#00B59C]/20'
+                : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700/60 hover:text-gray-900 dark:hover:text-white'
+                }`}
               title={item.label}
             >
               <div className="relative flex items-center justify-center shrink-0">
                 <Icon
-                  className={`w-5 h-5 transition-transform duration-200 group-hover:scale-110 ${
-                    isActive ? 'stroke-[2.2]' : 'stroke-[1.8]'
-                  }`}
+                  className={`w-5 h-5 transition-transform duration-200 group-hover:scale-110 ${isActive ? 'stroke-[2.2]' : 'stroke-[1.8]'
+                    }`}
                 />
                 {item.badge !== null && (
                   <span
-                    className={`absolute -top-1.5 -right-2 px-1.5 min-w-[18px] h-[18px] text-[10px] font-bold rounded-full flex items-center justify-center leading-none ${
-                      isActive
-                        ? 'bg-white text-[#00B59C]'
-                        : 'bg-[#00B59C] text-white'
-                    }`}
+                    className={`absolute -top-1.5 -right-2 px-1.5 min-w-[18px] h-[18px] text-[10px] font-bold rounded-full flex items-center justify-center leading-none ${isActive
+                      ? 'bg-white text-[#00B59C]'
+                      : 'bg-[#00B59C] text-white'
+                      }`}
                   >
                     {item.badge}
                   </span>
@@ -157,14 +154,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
             {/* Custom Interactive Toggle Switch */}
             <div
-              className={`w-11 h-6 rounded-full transition-colors relative cursor-pointer hidden lg:block ${
-                isDark ? 'bg-[#00B59C]' : 'bg-gray-300'
-              }`}
+              className={`w-11 h-6 rounded-full transition-colors relative cursor-pointer hidden lg:block ${isDark ? 'bg-[#00B59C]' : 'bg-gray-300'
+                }`}
             >
               <div
-                className={`w-4 h-4 rounded-full bg-white shadow-sm transform transition-transform duration-200 absolute top-1 ${
-                  isDark ? 'translate-x-6' : 'translate-x-1'
-                }`}
+                className={`w-4 h-4 rounded-full bg-white shadow-sm transform transition-transform duration-200 absolute top-1 ${isDark ? 'translate-x-6' : 'translate-x-1'
+                  }`}
               />
             </div>
           </div>
@@ -175,11 +170,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <div className="pt-3">
         <Link
           to="/settings"
-          className={`w-full text-left p-3 lg:p-3.5 rounded-2xl transition-all duration-200 border flex items-center gap-3 ${
-            pathname === '/settings'
-              ? 'bg-[#00B59C]/10 border-[#00B59C] text-[#00B59C] dark:bg-[#00B59C]/20'
-              : 'bg-gray-100 dark:bg-slate-700/60 hover:bg-gray-200/80 dark:hover:bg-slate-700 border-gray-200/60 dark:border-slate-600/60 text-gray-700 dark:text-gray-200'
-          }`}
+          className={`w-full text-left p-3 lg:p-3.5 rounded-2xl transition-all duration-200 border flex items-center gap-3 ${pathname === '/settings'
+            ? 'bg-[#00B59C]/10 border-[#00B59C] text-[#00B59C] dark:bg-[#00B59C]/20'
+            : 'bg-gray-100 dark:bg-slate-700/60 hover:bg-gray-200/80 dark:hover:bg-slate-700 border-gray-200/60 dark:border-slate-600/60 text-gray-700 dark:text-gray-200'
+            }`}
           title="Settings"
         >
           <div className="p-1.5 rounded-xl bg-white dark:bg-slate-800 shadow-xs shrink-0 text-gray-600 dark:text-gray-300">
